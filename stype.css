@@ -1,0 +1,223 @@
+body{
+  background-color: black
+}
+
+h1{
+    padding: 0 44%;
+}
+
+.insta{
+     padding-left: 40%;
+     padding-top: 185px;
+}
+
+.snap{
+    padding-left: 12%;
+}
+
+.logo2{
+  position: absolute;
+  bottom: 160px;          /* place on shelf */
+  left: 20%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 40px;             /* spacing between icons */
+}
+
+
+.spoti{
+       padding-left: 5%;
+}
+
+.tele{
+  padding-left: 7%;
+}
+
+body {
+  background-image: url("bg.jpg");
+  background-size: 98% 92%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+#enter-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#enter-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  text-align: right;
+  color: white;
+}
+
+.welcome-text h1 {
+  margin: 10px 20px;
+  font-size: 40px;
+  letter-spacing: 0px;
+}
+
+.logo2 img,
+.insta img {
+  transition: transform 0.2s ease,
+}
+
+.logo2 img:hover,
+.insta img:hover {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+  transform: scale(1.1);
+}
+
+
+#copy-popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10000;
+}
+
+#copy-popup.show {
+  opacity: 1;
+}
+
+.logo2 img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo2 img:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+  transform: scale(1.1);
+}
+
+.logo2 img:active {
+  transform: scale(0.9);
+}
+
+
+.gmail:hover {
+   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+  transform: scale(1.1);
+}
+
+.gmail.active {
+  transform: scale(0.9);
+}
+
+.email-icon{
+  padding-left: 14%;
+}
+
+
+
+
+/* =========================
+   FINAL MOBILE OVERRIDE
+   DO NOT MOVE THIS
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Reset everything */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Welcome text */
+  .welcome-text {
+    position: static !important;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .welcome-text h1 {
+    padding: 0 !important;
+    margin: 6px 0;
+    font-size: 24px;
+  }
+
+  /* TOP SHELF (Insta + Snap) */
+  .insta {
+    position: static !important;
+    padding: 0 !important;
+    margin-top: 110px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* BOTTOM SHELF (Discord + Spotify + Telegram + Gmail) */
+/* ===== BOTTOM SHELF (DESKTOP) ===== */
+.logo2 {
+  position: absolute;
+  bottom: 100px;          /* aligns to shelf */
+  left: 35%;              /* move shelf center */
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+  /* Email icon fix */
+  .email-icon {
+    padding: 0 !important;
+  }
+
+  /* Icon sizing */
+  .insta img,
+  .logo2 img {
+    width: 55px;
+    height: auto;
+  }
+
+  .gmail {
+    padding-top: 0 !important;
+  }
+}
